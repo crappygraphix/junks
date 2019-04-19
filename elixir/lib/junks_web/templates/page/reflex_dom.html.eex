@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>Junks! (Reflex-Dom)</title>
+    <script language="javascript" src="/reflex-dom/js/rts.js"></script>
+    <script language="javascript" src="/reflex-dom/js/lib.js"></script>
+    <script language="javascript" src="/reflex-dom/js/out.js"></script>
+    <script language="javascript" src="/materialize/jquery.min.js"></script>
+
+    <link href="/markdown/markdown.css" rel="stylesheet">
+    <link href="/material-icons/material-icons.css" rel="stylesheet">
+    <link href="/materialize/junks.css" rel="stylesheet">
+    <link href="/reflex-dom/css/custom.css" rel="stylesheet">
+  </head>
+
+  <body>
+    <div id="pipify"></div>
+    <div id="main-body"></div>
+  </body>
+  <script language="javascript" src="/reflex-dom/js/custom.js"></script>
+</html>

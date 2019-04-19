@@ -1,0 +1,20 @@
+###############################################################################
+# Set default behavior to automatically normalize line endings.
+###############################################################################
+
+## AUTO-DETECT
+##   Handle line endings automatically for files detected as
+##   text and leave all files detected as binary untouched.
+##   This will handle all files NOT defined below.
+*           text=lf
+
+## SOURCE CODE
+## Windows Batch/Shell Scripts
+*.bat       text eol=crlf
+*.ps1       text eol=crlf
+
+## Web Fonts
+*.woff      binary
+*.woff2     binary
+*.eot       binary
+*.ttf       binary

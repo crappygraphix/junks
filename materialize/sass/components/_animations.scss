@@ -1,0 +1,6 @@
+@keyframes border-glow
+  {
+    0% {border: 1px solid darken($primary-color, 30%);}
+    50% {border: 1px solid darken($primary-color, 45%);}
+    100% {border: 1px solid darken($primary-color, 30%);}
+  }

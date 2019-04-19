@@ -1,0 +1,89 @@
+// Markdown Library
+
+.editor-toolbar.fullscreen::before {
+  display: none;
+}
+
+.editor-toolbar.fullscreen::after {
+  display: none;
+}
+
+.rendered-md pre {
+  padding: 5px;
+  border: 1px solid $primary-color;
+}
+
+.editor-preview table {
+  border: 1px solid darken($primary-color, 25%);
+}
+
+.CodeMirror {
+  background: $backing-color;
+  border: 1px solid $primary-color;
+  color: $primary-color;
+}
+
+.CodeMirror-cursor {
+  border-left: 1px solid $primary-color;
+}
+
+.cm-s-easymde .cm-link,
+.cm-s-easymde .cm-url,
+.cm-s-easymde .cm-string,
+.cm-s-easymde .cm-quote {
+  color: $secondary-color;
+}
+
+.editor-toolbar {
+  border-top: 1px solid $primary-color;
+  border-left: 1px solid $primary-color;
+  border-right: 1px solid $primary-color;
+}
+
+.editor-statusbar {
+  color: $primary-color;
+}
+
+.editor-toolbar.fullscreen {
+  background: $backing-color;
+}
+
+.editor-preview {
+  background: $backing-color;
+}
+
+.editor-preview pre,
+.editor-preview-side pre {
+  border: 1px solid $primary-color;
+  background: $backing-color;
+  padding: 5px;
+}
+
+.editor-preview-side {
+  border: 1px solid $primary-color;
+  background: $backing-color;
+}
+
+.editor-toolbar i.separator {
+  border-left: 1px solid $secondary-color;
+  border-right: 1px solid $primary-color;
+}
+
+.editor-toolbar button {
+  color: $primary-color;
+}
+
+.editor-toolbar button:focus {
+  background: darken($primary-color, 45%);
+  border: none;
+}
+
+.editor-toolbar button:hover {
+  background: darken($primary-color, 45%);
+  border: none;
+}
+
+.editor-toolbar button.active {
+  border: 1px solid $primary-color;
+  background: $backing-color;
+}

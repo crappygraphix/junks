@@ -1,0 +1,32 @@
+a {
+  outline: 0;
+}
+
+/* Sidenav Tweeks */
+.sidenav li > a > i.right {
+  margin-right: 0px;
+}
+
+.sidenav li > a {
+  padding: 0 16px;
+}
+
+.sidenav .collapsible-header {
+  height: 48px;
+}
+
+.sidenav-folder-text {
+  display: inline-block;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 275px;
+}
+
+.sidenav li .icon-link-text {
+  display: inline-block;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 260px;
+}

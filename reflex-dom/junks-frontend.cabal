@@ -1,0 +1,100 @@
+name:                junks-frontend
+version:             0.0.1
+license:             MIT
+license-file:        LICENSE
+author:              Chris Johnston
+maintainer:          chris.johnston@crappygraphix.com
+build-type:          Simple
+cabal-version:       >=1.10
+
+library
+  hs-source-dirs:      src
+  exposed-modules:     Layout
+                     , CGX.Prelude
+  other-modules:       Api.Routes
+                     , Api.Xhr
+                     , Models.Auth
+                     , Models.Errors
+                     , Models.Lenses
+                     , Models.Types
+                     , Support.Dom.Inputs
+                     , Support.Dom.FFI
+                     , Support.Dom.Markdown
+                     , Support.Legos.Materialize.Button
+                     , Support.Legos.Materialize.Container
+                     , Support.Legos.Materialize.Form
+                     , Support.Legos.Materialize.Icon
+                     , Support.Legos.Materialize.Loader
+                     , Support.Legos.Materialize.Types
+                     , Support.Legos.Router.AppState
+                     , Support.Legos.Button
+                     , Support.Legos.Flash
+                     , Support.Legos.Form
+                     , Support.Legos.JQuery
+                     , Support.Legos.Materialize
+                     , Support.Legos.Router
+                     , Support.Legos.Types
+                     , Support.Legos
+                     , Support.Routes
+                     , Support.Session
+                     , Support.Util
+                     , Auth
+                     , Group
+                     , Nav
+                     , Note
+  build-depends:       base
+                     , aeson
+                     , aeson-casing
+                     , bytestring
+                     , containers
+                     , ghcjs-dom
+                     , http-api-data
+                     , jsaddle
+                     , microlens-platform
+                     , mtl
+                     , reflex
+                     , reflex-dom
+                     , reflex-dom-core
+                     , safe
+                     , servant
+                     , servant-reflex
+                     , string-conv
+                     , tagged
+                     , text
+                     , time
+                     , uri
+  if impl(ghcjs -any)
+    build-depends:     ghcjs-base
+  ghc-options:         -Wall -j1 -O0 -v0
+  default-language:    Haskell2010
+  default-extensions:  NoImplicitPrelude
+                     , OverloadedStrings
+                     , LambdaCase
+
+executable junks-frontend-exe
+  hs-source-dirs:      app
+  main-is:             Main.hs
+  ghc-options:         -threaded -rtsopts -with-rtsopts=-N -Wall -j1 -O0 -v0
+  cpp-options:         -DGHCJS_BROWSER
+  build-depends:       base
+                     , junks-frontend
+  default-language:    Haskell2010
+  default-extensions:  NoImplicitPrelude
+                     , OverloadedStrings
+                     , LambdaCase
+
+test-suite junks-frontend-test
+  type:                exitcode-stdio-1.0
+  hs-source-dirs:      test
+  main-is:             Spec.hs
+  build-depends:       base
+                     , hspec
+                     , junks-frontend
+  ghc-options:         -threaded -rtsopts -with-rtsopts=-N -Wall -j1 -O0 -v0
+  default-language:    Haskell2010
+  default-extensions:  NoImplicitPrelude
+                     , OverloadedStrings
+
+source-repository head
+  type:     git
+  location: https://github.com/crappygraphix/junks.git

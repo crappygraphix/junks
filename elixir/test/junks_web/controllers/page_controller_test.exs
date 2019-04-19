@@ -1,0 +1,8 @@
+defmodule JunksWeb.PageControllerTest do
+  use JunksWeb.ConnCase
+
+  test "GET /", %{conn: conn} do
+    conn = get conn, "/"
+    assert html_response(conn, 200) =~ "Junks!"
+  end
+end

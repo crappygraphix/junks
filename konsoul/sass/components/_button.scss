@@ -1,0 +1,13 @@
+button {
+  border: 2px solid $link-color;
+  background: $backing-color;
+  color: $link-color;
+  cursor: pointer;
+}
+
+button:hover {
+  border: 2px solid $text-color;
+  background: $backing-color;
+  color: $text-color;
+  cursor: pointer;
+}

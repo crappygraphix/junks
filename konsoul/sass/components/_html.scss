@@ -1,0 +1,16 @@
+//Default styles
+
+html {
+  font-family: $font-stack;
+  color: $text-color;
+  background-color: $backing-color;
+}
+
+button,
+input,
+optgroup,
+select,
+textarea {
+  font-family: $font-stack;
+  outline: none;
+}
