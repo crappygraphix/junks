@@ -1,3 +1,6 @@
+-- | Inspired by, and borrowing from the Router contribution.
+-- | https://github.com/reflex-frp/reflex-dom-contrib/blob/master/src/Reflex/Dom/Contrib/Router.hs
+
 {-# LANGUAGE
     CPP
   , ConstraintKinds
