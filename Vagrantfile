@@ -6,6 +6,17 @@ Vagrant.configure('2') do |config|
   config.vm.provider 'virtualbox' do |v|
     v.memory = 4096
     v.cpus = 2
+    v.customize ["modifyvm", :id, "--audio", "none"]
+    v.customize ["modifyvm", :id, "--vrde", "off"]
+    v.customize ["guestproperty", "set", :id, "--timesync-threshold", 1000]
+  end
+  
+  config.vm.provider 'hyperv' do |h, override|
+    h.memory = 4096
+    h.maxmemory = 6144
+    h.cpus = 2
+
+    override.vm.synced_folder '.', '/src', type: 'smb', mount_options: ['vers=3.0'], smb_host: ENV['VAGRANT_SMB_HOST'], smb_username: ENV['VAGRANT_SMB_USERNAME']
   end
 
   config.vm.synced_folder '.', '/vagrant', disabled: true
